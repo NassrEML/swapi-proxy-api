@@ -1,0 +1,5 @@
+swapi:
+  base-url: https://swapi.dev/api/
+
+redis:
+  enabled: false

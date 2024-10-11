@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - redis
+    environment:
+      - SPRING_REDIS_HOST=redis
+      - SPRING_REDIS_PORT=6379
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
